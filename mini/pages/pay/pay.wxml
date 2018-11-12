@@ -1,0 +1,23 @@
+<!--pages/pay/pay.wxml-->
+<view class="container">
+  <view class="address">
+    <view class="left">
+      <image src="../../img/dingwei.png"></image>
+    </view>
+    <view class="right"> 
+        <view class="top">
+          <view class="userInfo">
+            <text class="moren">默认</text>
+            <text>收货人：*颖</text>
+          </view>
+          <view>
+            <text>1833127391</text>
+          </view>
+        </view>
+        <view class="bottom .arrow">
+          <text>北京市-市辖区-海淀区</text>
+        </view>
+    </view>
+  </view>
+</view>
+

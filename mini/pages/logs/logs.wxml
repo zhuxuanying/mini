@@ -1,0 +1,48 @@
+<!--logs.wxml-->
+<!--1 头像-->
+<view class="avatar">
+   <image src="http://images2.jumei.com/user_avatar/087/867/87867731-64.png?1465792834?1540923307" mode="aspectFill" lazy-load></image> 
+</view>
+<!--2：个人资料-->
+<view class="cell myborder">
+    <navigator class="cell-item between">
+        <text>个人资料</text>
+        <text class="mygrey arrow">查看全部</text>
+    </navigator>
+</view>
+<view class="log-pic">
+    <navigator class="log-pic-cell">
+      <image src="../../img/daifukuan.png"></image>
+      <text>待付款</text>
+    </navigator>
+    <navigator class="log-pic-cell">
+        <image src="../../img/daifukuan.png"></image>
+        <text>待发货</text>
+    </navigator>
+    <navigator class="log-pic-cell">
+        <image src="../../img/daifukuan.png"></image>
+        <text>待收货</text>
+    </navigator>
+    <navigator class="log-pic-cell">
+        <image src="../../img/daifukuan.png"></image>
+        <text>待评价</text>
+    </navigator>
+</view>
+<!--4：常见问题-->
+<view class="cell">
+    <navigator class="cell-item arrow" >
+        <text>收货地址</text>
+    </navigator>
+    <navigator class="cell-item arrow">
+        <text>我的红包</text>
+    </navigator>
+    <navigator class="cell-item arrow">
+        <text>我的现金券</text>
+    </navigator>
+    <navigator class="cell-item arrow">
+        <text>我的祝福券</text>
+    </navigator>
+</view>
+
+
+

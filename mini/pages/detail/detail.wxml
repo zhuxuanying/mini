@@ -1,0 +1,104 @@
+<!--pages/detail/detail.wxml-->
+<view id="detail-top">
+  <!--image src="{{dProduct.pic}}"></image-->
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block>
+        <swiper-item>
+          <image src="{{dProduct.pic}}" class="slide-image" width="400" height="400" />
+        </swiper-item>
+         <swiper-item>
+          <image src="{{dProduct.pic}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+         <swiper-item>
+          <image src="{{dProduct.pic}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+  </swiper>
+  <view class="good">{{dProduct.goodrate}}%好评</view>
+  <view class="buy">
+      <view>
+          <text class="newPrice">￥{{dProduct.newPrice}}</text>
+          <text class="oldPrice">￥{{dProduct.oldPrice}}</text>
+      </view>
+      <text>{{dProduct.buyNum}}人已经购买</text>
+  </view>
+</view>
+
+<view class="cell ">
+    <view class="cell-item flex-between" >
+        <text>{{dProduct.intro}}</text>
+    </view>
+    <view class="cell-item flex-between">
+        <text class="title">运费</text>
+        <text class="content">{{dProduct.yunfei}}</text>
+    </view>
+    <view class="cell-item flex-between">
+        <text class="title">服务</text>
+        <text class="content">{{dProduct.fuwu}}</text>
+    </view>
+</view>
+
+<view class="director" bindtap='handlerSwitch'>
+    <view class="{{switchMsg=='pic'?'active':''}}" data-switch="pic">图文详情</view>
+    <view class="{{switchMsg=='detail'?'active':''}}" data-switch="detail">商品参数</view>
+    <view class="{{switchMsg=='pingjia'?'active':''}}" data-switch="pingjia">评价</view>
+</view>
+
+<view class="detail-container">
+  <template is="{{switchMsg}}" data="{{dProduct}}" ></template>
+</view>
+
+  
+  <template name="pic">
+    <view>
+        <image src="{{dProduct.pic}}"></image>   
+    </view>
+  </template>
+  <template name="detail">
+    <view class="detail-productintro">
+        <view class="cell ">
+          <view class="cell-item flex-between">
+              <text class="Ptitle">商品名称:</text>
+              <text class="Pcontent">{{dProduct.pname}}</text>
+          </view>
+          <view class="cell-item flex-between">
+              <text class="Ptitle">品牌名称:</text>
+              <text class="Pcontent">7{{dProduct.brand}}</text>
+          </view>
+          <view class="cell-item  flex-between">
+              <text class="Ptitle">功效说明:</text>
+              <text class="Pcontent">{{dProduct.gongxiao}}</text>
+          </view>
+          <view class="cell-item  flex-between">
+              <text class="Ptitle">注意事项:</text>
+              <text class="Pcontent">{{dProduct.zhuyi}}</text>
+          </view>
+      </view>
+    </view>
+  </template>
+  <template name="pingjia">
+    <view class="cell-item">
+      <text>这是评价</text>
+    </view>
+  </template>
+
+
+<!--底部的导航--->
+<view class="detail-bottom">
+    <view class="detail-shopcart">
+        <image src="../../img/shopCart.png"></image>
+        <text>购物车</text>
+        <view class="detailNum">{{totalNum}}</view>
+    </view>
+    <view class="detail-add" bindtap='addShopCart'>
+        加入购物车
+    </view>
+    
+    <view class="detail-buy" bindtap="jumpToPay" data-pid="{{pid}}">
+        立即购买
+    </view>
+</view>
+<view wx:if="{{addSuccess}}" id="addSuccess">
+   <text>加入购物车成功</text>
+</view>

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/pay/pay",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/shopCart/shopCart",
+    "pages/logs/logs",
+    
+    "pages/pintuan/pintuan",
+    "pages/search/search",
+    "pages/orderList/orderList",
+    "pages/mysearch/mysearch"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "聚美优品",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#EC1A5B",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "今日爆款",
+        "iconPath": "img/huoyan.png",
+        "selectedIconPath": "img/huoyan-active.png"
+      },
+      {
+        "pagePath": "pages/pintuan/pintuan",
+        "text": "拼团",
+        "iconPath": "img/pintuan.png",
+        "selectedIconPath": "img/pintuan-active.png"
+      },
+      {
+        "pagePath": "pages/shopCart/shopCart",
+        "text": "购物车",
+        "iconPath": "img/shopCart.png",
+        "selectedIconPath": "img/shopCart-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "img/wode.png",
+        "selectedIconPath": "img/wode-active.png"
+      }
+    ]
+  }
+}

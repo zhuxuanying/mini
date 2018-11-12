@@ -1,0 +1,43 @@
+/* pages/pay/pay.wxss */
+.container{
+ 
+  align-items: left;
+  font-size:14px;
+}
+.address{
+  display: flex;
+  flex-direction: row;
+  width:92%;
+  margin:0 auto;
+  align-items: center
+}
+.address .left{
+  width:9%;
+}
+.address .right{
+  width:90%;
+}
+.address image{
+  width:25px;
+  height:25px;
+} 
+.address .top{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+.address .userInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.address .moren{
+    font-size:10px;
+    background-color:#EC1A5B;
+    color:#fff;
+    padding:2rpx;
+    border-radius: 5rpx;
+    margin-right:10rpx;
+} 

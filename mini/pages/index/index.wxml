@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+    <navigator url="../mysearch/mysearch" id="index-search">
+    <input type="text" placeholder="搜索商品" ></input>
+    </navigator>
+    <!--image src="//c.vpimg1.com/upcb/2018/10/20/58/ias_154000252078610_570x273_90.jpg"   ></image>
+    <image src="//c.vpimg1.com/upcb/2018/10/26/4/ias_154055015017468_570x273_90.jpg"></image-->
+    <view class="product" wx:for="{{productList}}" wx:key="item.pid">
+      <view class="left">
+          <image src="{{item.pic}}" bindtap="showDetail" data-pid="{{item.pid}}"></image>
+      </view>
+      <view class="right">
+          <view >
+            <view class="ziying" wx:if="{{item.isZiying=='true'}}">
+              聚美自营
+            </view>
+            {{item.intro}} 
+           
+          </view>
+          <view class="price">
+            <text class="nowPrice">￥{{item.newPrice}}</text>
+            <text class="oldPrice">￥{{item.oldPrice}}</text>
+          </view>
+          <text class="arguments">{{item.arguNum}}条评论</text>
+          
+      </view>
+    </view>
+    
+    
+  <view class="loadmore loading"  wx:if="{{hasMore}}">
+    正在加载...
+  </view>  
+</view>

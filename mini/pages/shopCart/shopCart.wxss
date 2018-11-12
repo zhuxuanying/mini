@@ -1,0 +1,126 @@
+/* pages/shopCart/shopCart.wxss */
+.shopCart-container{
+    background:#fff;
+    font-size:14px;
+    position: relative;
+}
+.shopCart-container .top{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:12rpx;
+    
+}
+.shopCart-container .tip{
+    color:#999;
+}
+
+.shopCart-container .jumei{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+.shopCart-container .carts-list{
+    padding:15rpx;
+}
+.shopCart-container .cart-item{
+    display: flex;
+    align-items: center;
+    margin-bottom:15rpx;
+}
+
+.card{
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    padding:15rpx;
+    
+}
+.card image{
+    width:200rpx;
+    height:200rpx;
+}
+.card .card-item{
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    padding:10rpx;
+    box-shadow:0 0 20rpx #999;
+}
+.card-money{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:6rpx;
+    align-items: center
+}
+.card .card-button{
+    display: flex;
+    align-items: center;
+}
+.card-button button{
+    width:50rpx;
+    height:50rpx;
+    line-height: 50rpx;
+    background: #fff;
+    border:0px;
+    outline:0px;
+    padding:0px
+}
+.card-button input{
+    width:30rpx;
+}
+.card-haosheng{
+    font-size:12px;
+    color:#999;
+    margin-top:20rpx;
+}
+.card-price{
+    font-size:14px;
+    color:#EC1A5B;
+}
+
+.shopCart-container .pay{
+    padding:0rpx 20rpx 0rpx 20rpx;
+    display: flex;
+    justify-content:space-between;
+    position: fixed;
+    display: flex;
+    bottom:0px;
+    height:80rpx;
+    line-height: 80rpx;
+    width:100%;
+    border-top: 1px solid #e8e8e8;
+
+    background:#ffffff;
+    z-index:2;
+}
+
+.shopCart-container .pay-total text{
+    color:#EC1A5B;
+}
+.shopCart-container .pay-jiesuan{
+    color:#fff;
+    background: #EC1A5B;
+    width:250rpx;
+    text-align: center;
+    border-radius: 2rpx;
+}
+.pay-shanchu{
+    background:#ddd;
+    color:#fff;
+   
+    width:250rpx;
+    text-align: center;
+    border-radius: 2rpx;
+}
+.pay-shanchuActive{
+    background: #EC1A5B;
+    color:#fff;
+   
+    width:250rpx;
+    text-align: center;
+    border-radius: 2rpx;
+
+}

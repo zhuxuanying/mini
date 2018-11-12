@@ -1,0 +1,71 @@
+<!--pages/shopCart/shopCart.wxml-->
+<view class="shopCart-container">
+    <view class="xian"></view>
+
+    <view class="top">
+        <text class="tip">商品数量有限请尽快结算哦</text>
+        <text bindtap="editor" wx:if="{{hasEditor}}">编辑</text>
+        <text bindtap="successEditor" wx:else>完成</text>
+    </view>
+
+    <view class="xian"></view>
+
+    <view class="carts-list">
+        <view class="cart-item" wx:for="{{carts}}" wx:key="item.id" >
+            <!-- //复选框 -->
+            <view  class="carts-radio">
+                <icon wx:if="{{item.selected}}" bindtap="selectToggle" data-index="{{index}}" type="success_circle" size="20" />
+                <icon  bindtap="selectToggle" data-index="{{index}}" wx:else type="circle" size="20" />
+            </view>
+           <!--商品信息-->
+            <view class="card">
+                <view>
+                   <image src="{{item.pic}}"></image>
+                </view>
+                <view class="card-item">
+                    <text>{{item.intro}}</text>
+                    <text class="card-haosheng">{{item.xinghao}}</text>
+                    <view class="card-money">
+                        <text class="card-price">￥{{item.price}}</text>
+                        <view  class="card-button">
+                            <button bindtap="sub" data-index="{{index}}">-</button>
+                            <input type="number"  value="{{item.num}}"></input>
+                            <button bindtap="add" data-index="{{index}}">+</button>
+                        </view>
+        
+                    </view>
+                </view>
+            </view>
+        </view>
+    
+    </view>
+
+    <view class="pay" wx:if="{{hasEditor}}">
+        <view class="carts-radio">
+            <icon wx:if="{{selectAllStatus}}"type="success_circle" size="20" bindtap="selectAll"/>
+            <icon wx:else type="circle" size="20" bindtap="selectAll"/>
+        </view>
+         <view class="pay-total">
+            合计:<text>￥{{totalPrice}}</text>
+         </view>
+         <view class="pay-jiesuan">
+             结算({{totalNum}})
+         </view>
+         
+    </view>
+    <view class="pay" wx:else>
+        <view class="carts-radio">
+            <icon wx:if="{{selectAllStatus}}"type="success_circle" size="20" bindtap="selectAll"/>
+            <icon wx:else type="circle" size="20" bindtap="selectAll"/>
+        </view>
+        <view wx:if="{{!selectLeastOne}}" class="pay-shanchu">
+                删除商品
+        </view>
+        <view wx:else class="pay-shanchuActive" bindtap="deleteCartsItem" data-index="{{index}}">
+                删除商品
+        </view>
+    </view>
+
+
+    
+</view>

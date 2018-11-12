@@ -1,0 +1,161 @@
+/* pages/detail/detail.wxss */
+#detail-top{
+    font-size:12px;
+    display: flex;
+    flex-direction: column;
+    padding:10rpx;
+    color:rgb(82, 80, 80);
+    border-bottom: 1px solid #e8e8e8;
+}
+#detail-top swiper{
+  display: flex;
+  text-align: center;
+
+}
+#detail-top image{
+    width:400rpx;
+    margin:0 auto;
+    height:400rpx;
+    margin-top:-46rpx;
+}
+#detail-top .good{
+    background:#F5CBDB;
+    color:#ED145B;
+    padding:5rpx;
+    float: left;
+    font-size: 10px;
+    align-self: flex-end;
+    border-radius: 10rpx;
+}
+#detail-top .buy{
+    display: flex;
+    justify-content:space-between;
+   
+}
+.detail-container  .cell-item{
+  text-align: center;
+  margin-left:24rpx;
+
+}
+#detail-top .newPrice{
+    font-size:16px;
+    color:#ED145B;
+    font-weight: bold;
+}
+#detail-top .oldPrice{
+    text-decoration: line-through;
+    margin-left:10rpx;
+    color:#999;
+}
+#addSuccess{
+  position: absolute;
+  top:80%;
+  border-radius: 10rpx;
+  padding:8rpx;
+  background-color:rgba(0, 0, 0, 0.8);
+  left:5%;
+  font-size:10px;
+  color:#fff;
+}
+.cell .flex-between{
+    display: flex;
+    width:92%;
+}
+.cell .title{
+    width:15%
+}
+.cell .Ptitle{
+    width:20%;
+   
+}
+.content{
+    color:#000;
+    width:85%
+}
+.Pcontent{
+    color:#000;
+    width:72%;
+    text-align:left;
+}
+
+
+
+.detail-productintro{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+}
+.detail-productintro .cell{
+    width:100%;
+}
+.detail-bottom{
+    font-size:12px; 
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:70rpx;
+    text-align: center;
+}
+.detail-bottom image{
+    width:45rpx;
+    height:45rpx;
+}
+.detail-bottom view{
+    height:70rpx;
+     
+}
+.director{
+    display: flex;
+    font-size:14px;
+    justify-content: space-around;
+    height:60rpx;
+    line-height: 60rpx;
+}
+.active{
+    text-align: center;
+    border-bottom: 1px solid #ED145B;
+    color:#ED145B;
+}
+.navigator-hover{
+  background-color:#fff;
+  color:#000;
+}
+/** 自定义其他点击态样式类 **/
+
+.detail-shopcart{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width:30%;
+    justify-content: center;
+    align-items: center;
+    font-size:10px;
+    position: relative;
+    background: #fff;
+}
+.detail-add{
+    float: left;
+    width:35%;
+    background:#F5CBDB;
+    color:#ED145B;
+    line-height: 70rpx;
+}
+.detail-buy{
+    float: left;
+    width:35%;
+    background:#E81A62;
+    color:#fff;
+    line-height: 70rpx;
+}
+.detail-bottom .detailNum{
+    position: absolute;
+    width:28rpx;
+    height:28rpx;
+    text-align: center;
+    background:#ED145B;
+    border-radius: 50%;
+    font-size:10px;
+    color:#fff;
+    top:-3rpx;
+    left:119rpx;
+}

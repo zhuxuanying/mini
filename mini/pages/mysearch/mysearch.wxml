@@ -1,0 +1,4 @@
+<!--pages/mysearch/mysearch.wxml-->
+<navigator url="../mysearch/mysearch" id="index-search">
+    <input type="text" placeholder="搜索商品" ></input>
+</navigator>

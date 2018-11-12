@@ -1,0 +1,43 @@
+.avatar{
+    height: 400rpx;
+   background:#fff url(http://images2.jumei.com/user_avatar/087/867/87867731-200.png?1465792834?1540923307) no-repeat;
+   background-size: cover;
+   display: flex;   /*弹性布局*/
+    justify-content: center;  /*居中*/
+    align-items: center;
+}
+.avatar image{
+    width:200rpx; /*头像宽度和高度*/
+    height: 200rpx;
+    border:10rpx solid rgba(0,0,0,.3);
+    border-radius: 50%;
+}
+.between{
+  display:flex;
+  justify-content:space-between;
+}
+.mygrey{
+  color:#999;
+}
+.myborder{
+  border-bottom: 1px solid #f1f1f1;
+
+}
+.log-pic{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size:11px;
+  color:#999;
+  padding:20rpx 0px 10rpx 0px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.log-pic-cell{
+  display: flex;
+  flex-direction: column;
+}
+.log-pic-cell image{
+  width:55rpx;
+  height:55rpx;
+  margin-left:10rpx;
+}
